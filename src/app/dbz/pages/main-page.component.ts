@@ -6,19 +6,27 @@ import { Character } from '../Interfaces/character.interface';
     templateUrl: './main-page.component.html'
 })
 
-export class MainPageComponent  {
+export class MainPageComponent {
     public characters: Character[] = [
         {
-            name: 'Krilin', 
+            name: 'Krilin',
             power: 100
         },
         {
             name: 'Goku',
-            power:9500
+            power: 9500
         },
         {
             name: 'Vegeta',
-            power:7500
+            power: 7500
         }
     ];
+
+    onNewCharacter(character: Character): void {
+        this.characters.push(character);
+    }
+
+    onDeleteCharacter(index:number){
+        this.characters.splice(index,1);
+    }
 }
