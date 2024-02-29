@@ -8,6 +8,8 @@ import { Character } from '../../Interfaces/character.interface';
 })
 export class CharacterComponent {
   @Output()
+
+  //propiedad => de un objeto emmiter
   onNewCharacter: EventEmitter<Character> = new EventEmitter();
 
   public character: Character = {
